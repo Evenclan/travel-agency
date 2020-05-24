@@ -6,14 +6,15 @@ import { calculateTotal } from '../../../utils/calculateTotal';
 import { formatPrice } from '../../../utils/formatPrice';
 
 
-// import PropTypes from 'prop-types';
-
-
 class OrderSummary extends React.Component {
+
+
   static propTypes = {
     tripCost: PropTypes.node,
     options: PropTypes.any,
   }
+
+
 
   render() {
     const {tripCost, options } = this.props;
@@ -22,8 +23,6 @@ class OrderSummary extends React.Component {
     );
   }
 }
-
-
 
 export default OrderSummary;
 
