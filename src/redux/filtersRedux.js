@@ -20,6 +20,7 @@ export const REMOVE_TAG = createActionName('REMOVE_TAG');
 export const changeSearchPhrase = payload => ({ payload, type: CHANGE_PHRASE });
 
 // TODO - add other action creators
+
 export const changeDuration = (payload, value) => ({ payload, value, type: CHANGE_DURATION });
 export const addTag = payload => ({ payload, type: ADD_TAG });
 export const removeTag = payload => ({ payload, type: REMOVE_TAG });

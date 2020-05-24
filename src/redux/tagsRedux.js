@@ -17,10 +17,10 @@ const createActionName = name => `app/${reducerName}/${name}`;
 
 
 // reducer
-export default function reducer(statePart = [], action = {}) {
-  switch (action.type) {
-    default:
-      return statePart;
-  }
-}
+// export default function reducer(statePart = [], action = {}) {
+//   switch (action.type) {
+//     default:
+//       return statePart;
+//   }
+// }
 */

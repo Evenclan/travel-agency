@@ -1,5 +1,6 @@
 import {combineReducers, createStore} from 'redux';
 import tripList from '../data/trips.json';
+import orderReducer from './orderRedux';
 
 import globalReducer from './globalRedux';
 import filtersReducer from './filtersRedux';
@@ -11,6 +12,11 @@ const initialState = {
   regions: {},
   subregions: {},
   tags: {},
+  order: {
+    trip: null,
+    email: '',
+    options: {},
+  },
   filters: {
     searchPhrase: '',
     tags: [],
@@ -21,10 +27,14 @@ const initialState = {
   },
 };
 
+
 // define reducers
 const reducers = {
   filters: filtersReducer,
+  order: orderReducer,
 };
+
+
 
 // add blank reducers for initial state properties without reducers
 Object.keys(initialState).forEach(item => {
