@@ -278,7 +278,7 @@ use the code below at: https://next.json-generator.com
         return tags.integer(2, 14);
       },
       cost(tags){
-        const base = 1000 * this.days;
+        const base = 700 * this.days;
         return tags.floating(base, base*10, 2, '$0,0.00');
       },
       image(tags){
