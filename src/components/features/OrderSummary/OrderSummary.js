@@ -8,13 +8,10 @@ import { formatPrice } from '../../../utils/formatPrice';
 
 class OrderSummary extends React.Component {
 
-
   static propTypes = {
-    tripCost: PropTypes.node,
-    options: PropTypes.any,
+    tripCost: PropTypes.string,
+    options: PropTypes.object,
   }
-
-
 
   render() {
     const {tripCost, options } = this.props;
