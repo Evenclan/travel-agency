@@ -10,16 +10,17 @@ class OrderForm extends React.Component {
   static propTypes = {
     tripCost: PropTypes.string,
     options: PropTypes.object,
+    setOrderOption: PropTypes.func,
   }
 
   render() {
-    const { tripCost, options} = this.props;
+    const { tripCost, options, setOrderOption} = this.props;
     // console.log('to jest typeof', typeof tripCost, typeof options);
     return (
       <Row>
         {pricing.map(option => (
           <Col md={4} key={option.id}>
-            <OrderOption {...option} />
+            <OrderOption {...option} currentValue={options[option.id]} setOrderOption={setOrderOption} />
           </Col>
         ))}
         <Col xs={12}>
