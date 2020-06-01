@@ -38,15 +38,21 @@ it ('should check if (name/cost/days) props renders properly', () => {
   const days1 = days.replace(' days', '');
   const days2 = parseInt(days1);
 
-  console.log(cost1);
-  console.log(days1);
-
-
-
   expect(title).toEqual(expectedName);
   expect(cost1).toEqual(expectedCost);
   expect(days2).toEqual(expectedDays);
+});
 
+it('should render tag in span', () => {
+  const tags = ['one', 'two', 'three'];
+  const component = shallow(<TripSummary tags={[...tags]} />);
+  expect(component.find('.tags span').at(0).text()).toEqual(tags[0]);
+  expect(component.find('.tags span').at(1).text()).toEqual(tags[1]);
+  expect(component.find('.tags span').at(2).text()).toEqual(tags[2]);
+});
 
-
+it('should crash is tags are false or not given', () => {
+  const component = shallow(<TripSummary tags={[]} />);
+  expect(component.find('.tags')).toBeTruthy();
+  console.log(component.debug());
 });
