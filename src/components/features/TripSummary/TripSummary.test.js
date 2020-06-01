@@ -28,10 +28,24 @@ it ('should check if (name/cost/days) props renders properly', () => {
 
   const component = shallow(<TripSummary name={expectedName} cost={expectedCost} days={expectedDays} tags={[]} />);
 
+
   const title = component.find('.title').text();
-  // Warning: Failed prop type: Invalid prop `days` of type `string` supplied to `TripSummary`, expected `number`.
+  // https://enzymejs.github.io/enzyme/docs/api/ReactWrapper/first.html
+  const cost = component.find('span').at(1).text();
+  const cost1 = cost.replace('from ', '');
+
+  const days = component.find('span').at(0).text();
+  const days1 = days.replace(' days', '');
+  const days2 = parseInt(days1);
+
+  console.log(cost1);
+  console.log(days1);
+
+
 
   expect(title).toEqual(expectedName);
+  expect(cost1).toEqual(expectedCost);
+  expect(days2).toEqual(expectedDays);
 
 
 
