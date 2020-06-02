@@ -17,10 +17,9 @@ const OrderOptionNumber = ({ currentValue, price, setOptionValue, limits }) => (
 
 OrderOptionNumber.propTypes = {
   limits: PropTypes.object,
-  currentValue: PropTypes.string,
+  currentValue: PropTypes.number,
   setOptionValue: PropTypes.func,
   price: PropTypes.string,
 };
-console.log(typeof values);
 
 export default OrderOptionNumber;

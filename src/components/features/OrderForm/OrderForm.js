@@ -15,7 +15,6 @@ class OrderForm extends React.Component {
 
   render() {
     const { tripCost, options, setOrderOption} = this.props;
-    // console.log('to jest typeof', typeof tripCost, typeof options);
     return (
       <Row>
         {pricing.map(option => (

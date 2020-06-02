@@ -25,13 +25,11 @@ const OrderOptionIcons = ({values, required, currentValue, setOptionValue}) => (
 );
 
 OrderOptionIcons.propTypes = {
-  values: PropTypes.string,
-  required: PropTypes.string,
+  values: PropTypes.array,
+  required: PropTypes.bool,
   currentValue: PropTypes.string,
   setOptionValue: PropTypes.func,
 };
-
-console.log('to jest typeof', typeof values, typeof required);
 
 export default OrderOptionIcons;
 

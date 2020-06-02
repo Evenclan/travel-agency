@@ -19,12 +19,11 @@ const OrderOptionDropdown = ({values, required, currentValue, setOptionValue}) =
 );
 
 OrderOptionDropdown.propTypes = {
-  values: PropTypes.string,
-  required: PropTypes.string,
+  values: PropTypes.array,
+  required: PropTypes.node,
   currentValue: PropTypes.string,
   setOptionValue: PropTypes.func,
 };
-console.log('to jest typeof', typeof values);
 
 export default OrderOptionDropdown;
 
