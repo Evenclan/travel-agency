@@ -196,11 +196,6 @@ for (let type in optionTypes) {
 
       }
       case 'date': {
-        it('contains div', () => {
-          const div = renderedSubcomponent.find('div');
-          expect(div.length).toBe(1);
-        });
-
         it('should run setOrderOption function on change', () => {
           renderedSubcomponent.find(datePicker).simulate('change', testValue);
           expect(mockSetOrderOption).toBeCalledTimes(1);
