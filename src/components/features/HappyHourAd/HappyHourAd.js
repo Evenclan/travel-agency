@@ -23,7 +23,7 @@ class HappyHourAd extends React.Component {
   }
 
   render() {
-    const {titleText, promoDescription} = this.props;
+    const {titleText = 'titleText', promoDescription = 'promoDescription'} = this.props;
     const getTime = this.getCountdownTime();
     return (
       <div className={styles.component}>
