@@ -13,4 +13,3 @@ export const formatTime = (time) => {
 
   return newTime;
 };
-
